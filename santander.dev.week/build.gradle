@@ -23,6 +23,11 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "me.dio.santander.dev.week.Application"
+	}
+}
 
 tasks.named('test') {
 	useJUnitPlatform()
